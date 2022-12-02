@@ -1,6 +1,6 @@
 # The TI-BASIC Compiler
 
-This is a fork of [the original project](https://github.com/miselin/tibasic) made initially to implement support for additional symbols. Now it also serves to bring it up to modern standards.
+This is a fork of [the original project](https://github.com/miselin/tibasic) made initially to implement support for additional symbols.
 
 The TI-BASIC Compiler is all about compiling TI-BASIC code on your computer
 into an 8XP file ready for transferring to your TI-83/TI-83+/TI-84 calculator.
@@ -32,18 +32,21 @@ ninja -C build
 
 ## Important Note!
 
-There are a few symbols that could not be directly transferred to the language and were replaced instead with simpler tokens. Also note some of these are 'shorthand' versions of supported tokens:
+There are a few symbols that could not be directly transferred to the language and were replaced instead with tokens. Here are some examples of replaced symbols:
 
-& --> 'and'\
-| --> ' or '\
-~ --> ' xor '\
-theta --> '[theta]'\
-powers --> '^' (for instance, 5 squared would be '5^2')\
-'e' constant --> '[e]'\
-Store --> '->' (same for such things as >DMS: ->DMS)\
-Roots --> '[root]^' (for instance, square root would be '[root]^2')
+|TIBasic symbol|Supported token|e.g.|
+|-|-|-|
+|`&`|`and`||
+|`\|`|`or`||
+|`~`|`xor`||
+|`θ`|`[theta]`||
+|powers|`^`|Five squared : `5^2`|
+|`e`|`[e]`||
+|roots|`[root]^`|Square root of D : `[root]^2D`|
+|`-` (negative)|`[neg]`|Negative X : `[neg]X`|
+|`→` (store)|`->`||
 
-All Picture variables (Pic0 - Pic9) and String variables (Str0 - Str9) are CAPITALIZED (ie. STR0)
+All Picture variables (Pic0 - Pic9) and String variables (Str0 - Str9) are CAPITALIZED (i.e. STR0)
 
 TODO specify all (replaced) symbols and corresponding tokens
 
