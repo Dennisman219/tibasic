@@ -64,7 +64,11 @@ int main( int argc, char* argv[] )
 	if((argc < 2) || (argv[1] == NULL))
 	{
 		// Inform the user
+#ifdef _WIN32
         log(Error, "Usage: tibasic.exe [options] filename\nOptions:\n\t-d\t\tDecompile\n\t-o filename\tOutput file");
+#else
+        log(Error, "Usage: tibasic [options] filename\nOptions:\n\t-d\t\tDecompile\n\t-o filename\tOutput file");
+#endif
 		return 1;
 	}
 
